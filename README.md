@@ -59,8 +59,45 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-  ignore = dirty
+	ignore = dirty
 ```
+
+## 2. Plugins installed
+
+* [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
+* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+
+## 3. Plugin dependencies
+
+* libclang > 3.8: required by YouCompleteMe
+```
+$ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
+$ tar xf clang*
+$ cd clang*
+$ sudo cp -R * /usr/local/
+```
+
+## 4. Extra information for plugin installation
+
+**YouCompleteMe**
+
+* Install YCM using git add submodule
+```
+$ git submodule add https://github.com/Valloric/YouCompleteMe.git
+$ git submodule update --init --recursive
+```
+* Download latest version of [libclang](http://llvm.org/releases/download.html). You can install it to the system directory if you want. Follow the above instructions.
+* Compile ycm_core library with C-family support
+```
+$ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/local . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+$ cmake --build . --target ycm_core --config Release
+```
+Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
+
+
+## 5. Plugins interested
+
+* [Ultisnips](https://github.com/SirVer/ultisnips)
 
 ## Reference:
 
