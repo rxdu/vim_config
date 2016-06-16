@@ -66,6 +66,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+* [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
 * [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format)
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags)
