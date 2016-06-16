@@ -2,3 +2,6 @@
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 	ignore = dirty
+[submodule "bundle/vim-cpp-enhanced-highlight"]
+	path = bundle/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git

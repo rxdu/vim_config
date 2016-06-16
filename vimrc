@@ -22,3 +22,6 @@ set showmatch           " highlight matching [{()}]
 """ Search
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+
+""" C++ Enhanced Highlight
+let c_no_curly_error = 1
