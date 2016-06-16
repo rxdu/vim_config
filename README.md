@@ -68,6 +68,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 * [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format)
+* [Gutentags](https://github.com/ludovicchabant/vim-gutentags)
 
 ## 3. Plugin dependencies
 
@@ -77,6 +78,11 @@ $ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
 $ tar xf clang*
 $ cd clang*
 $ sudo cp -R * /usr/local/
+```
+
+* ctags: required by Gutentags
+```
+$ sudo apt-get install exuberant-ctags
 ```
 
 ## 4. Extra information for plugin installation

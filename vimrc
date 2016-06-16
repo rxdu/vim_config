@@ -29,3 +29,6 @@ let c_no_curly_error = 1
 
 """ Clang-Format
 " g:clang_format#code_style "llvm, google, chromium, mozilla
+
+""" Gutentags
+let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
