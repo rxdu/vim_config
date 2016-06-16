@@ -100,6 +100,7 @@ Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
 ## 5. Plugins interested
 
 * [Ultisnips](https://github.com/SirVer/ultisnips)
+* [Lightline](https://github.com/itchyny/lightline.vim)
 
 ## Reference:
 

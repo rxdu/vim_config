@@ -25,3 +25,7 @@ set hlsearch            " highlight matches
 
 """ C++ Enhanced Highlight
 let c_no_curly_error = 1
+" let g:cpp_class_scope_highlight = 1
+
+""" Clang-Format
+" g:clang_format#code_style "llvm, google, chromium, mozilla
