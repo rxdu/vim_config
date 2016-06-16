@@ -67,6 +67,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 Configuration
 * http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 * http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules
+* http://dougblack.io/words/a-good-vimrc.html
 
 Resource
 * https://github.com/tpope/vim-pathogen
