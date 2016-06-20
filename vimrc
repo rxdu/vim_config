@@ -6,12 +6,25 @@
 "              ruixiang.du@gmail.com
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
+""" General vim configurations
+:filetype plugin on
+
 """ Pathogen 'runtimepath' management
 execute pathogen#infect()
 call pathogen#helptags()
 
 """ Colors and Fonts
 syntax on
+let g:cpp_experimental_template_highlight = 1
+"set background=dark
+"colorscheme kalisi
+
+""" C.vim
+let g:C_UseTool_cmake = 'yes'
+let g:C_UseTool_doxygen = 'yes'
+
+""" Spelling check
+set spell spelllang=en_us
 
 """ Editor UI
 set number              " show line numbers
@@ -32,3 +45,9 @@ let c_no_curly_error = 1
 
 """ Gutentags
 let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
+
+""" YouCompleteMe
+"let g:ycm_show_diagnostics_ui = 1
+"let g:ycm_enable_diagnostic_signs = 0
+"let g:ycm_enable_diagnostic_highlighting = 0
+
