@@ -64,4 +64,4 @@ let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
 "let g:ycm_enable_diagnostic_highlighting = 0
 
 """ Key mapping
-:imap jj <Esc>
+:inoremap jj <Esc>
