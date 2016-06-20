@@ -39,7 +39,7 @@ $ cd ~
 $ git clone <your-vim-dotfile-repo-url> ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 $ cd ~/.vim
-$ git submodule update --init
+$ git submodule update --init --recursive
 ```
 
 * Upgrade a plugin bundle/all bundles
@@ -70,6 +70,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 * [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format)
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags)
+* [c.vim](http://www.vim.org/scripts/script.php?script_id=213)
 
 ## 3. Plugin dependencies
 
