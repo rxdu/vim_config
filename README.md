@@ -4,6 +4,8 @@ Configurations and plugins for Vim.
 
 ## 1. Commands
 
+**Setting up vim**
+
 * Using git to track dotfiles
 ```
 $ mv .vimrc ~/.vim/vimrc
@@ -62,6 +64,15 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 	ignore = dirty
 ```
 
+**Using vim**
+
+* Format:
+```
+:ClangFormat
+```
+
+
+
 ## 2. Plugins installed
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
@@ -110,12 +121,16 @@ Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
 * [Ultisnips](https://github.com/SirVer/ultisnips)
 * [Lightline](https://github.com/itchyny/lightline.vim)
 
+
 ## Reference:
 
 Configuration
 * http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 * http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules
 * http://dougblack.io/words/a-good-vimrc.html
+
+Plugin documentation
+* https://lug.fh-swf.de/vim/vim-c/c-hotkeys.pdf
 
 Resource
 * https://github.com/tpope/vim-pathogen
