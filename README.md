@@ -66,11 +66,21 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 
 **Using vim**
 
-* Format:
+* Invoke clang-format:
 ```
 :ClangFormat
 ```
 
+* Invoke YCM-Generator to generate .ycm_extra_conf.py for the project
+```
+:YcmGenerateConfig
+```
+
+* C-support
+```
+\cc		# code to comment //
+\co		# comment // to code
+```
 
 
 ## 2. Plugins installed
@@ -108,6 +118,14 @@ $ git submodule add https://github.com/Valloric/YouCompleteMe.git
 $ git submodule update --init --recursive
 ```
 * Download latest version of [libclang](http://llvm.org/releases/download.html). You can install it to the system directory if you want. Follow the above instructions.
+
+* First try to use the provided script to install this plugin:
+
+```
+$ cd ~/.vim/bundle/YouCompleteMe
+$ ./install.py --clang-completer
+```
+
 * Compile ycm_core library with C-family support
 ```
 $ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/local . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp

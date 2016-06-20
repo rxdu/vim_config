@@ -7,7 +7,18 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 """ General vim configurations
-:filetype plugin on
+filetype on
+filetype plugin on
+
+""" Indent settings
+filetype indent on
+set autoindent
+set smartindent
+set cindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
 
 """ Pathogen 'runtimepath' management
 execute pathogen#infect()
@@ -52,3 +63,5 @@ let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
 "let g:ycm_enable_diagnostic_signs = 0
 "let g:ycm_enable_diagnostic_highlighting = 0
 
+""" Key mapping
+:imap jj <Esc>
