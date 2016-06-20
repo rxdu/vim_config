@@ -2,13 +2,13 @@
 §  User Macros
 § ==========================================================
 
-SetMacro( 'AUTHOR',      'Ruixiang Du' )
-SetMacro( 'AUTHORREF',   'rdu' )
+SetMacro( 'AUTHOR',      'YOUR NAME' )
+SetMacro( 'AUTHORREF',   '' )
 SetMacro( 'COMPANY',     '' )
 SetMacro( 'COPYRIGHT',   '' )
-SetMacro( 'EMAIL',       'ruixiang.du@gmail.com' )
+SetMacro( 'EMAIL',       '' )
 SetMacro( 'LICENSE',     '' )
-SetMacro( 'ORGANIZATION','Worcester Polytechnic Institute' )
+SetMacro( 'ORGANIZATION','' )
 
 SetStyle( 'C' )
 
