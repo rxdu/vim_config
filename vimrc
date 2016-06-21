@@ -25,10 +25,10 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 """ Colors and Fonts
-syntax on
-let g:cpp_experimental_template_highlight = 1
+syntax enable 
+"let g:cpp_experimental_template_highlight = 1
 "set background=dark
-"colorscheme kalisi
+colorscheme colorsbox-material
 
 """ C.vim
 let g:C_UseTool_cmake = 'yes'

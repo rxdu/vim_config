@@ -92,6 +92,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format)
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags)
 * [c.vim](http://www.vim.org/scripts/script.php?script_id=213)
+* [colorsbox](https://github.com/mkarmona/colorsbox)
 
 ## 3. Plugin dependencies
 
@@ -133,6 +134,12 @@ $ cmake --build . --target ycm_core --config Release
 ```
 Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
 
+**Colorscheme**
+
+Add the following variable to .bashrc to show color correctly.
+```
+export TERM=xterm-256color
+```
 
 ## 5. Plugins interested
 
