@@ -1,4 +1,5 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 "                Vim Configurations
 """"""""""""""""""""""""""""""""""""""""""""'""""""'
 "                  Ruixiang Du
@@ -42,6 +43,9 @@ set number              " show line numbers
 set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
 set showmatch           " highlight matching [{()}]
+
+""" Lightline
+set laststatus=2
 
 """ Search
 set incsearch           " search as characters are entered
