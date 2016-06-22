@@ -81,7 +81,11 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 \cc		# code to comment //
 \co		# comment // to code
 ```
-
+* Tags
+```
+ctrl+]	# jump to tag
+ctrl+t	# return from tag
+```
 
 ## 2. Plugins installed
 
