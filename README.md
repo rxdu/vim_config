@@ -66,6 +66,15 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 
 **Using vim**
 
+* General vim commands
+```
+/pattern	# search forward
+?pattern	# search backward
+n			# repeat search in same direction
+N			# repeat search in opposite direction
+```
+```
+
 * Invoke clang-format:
 ```
 :ClangFormat

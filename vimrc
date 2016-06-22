@@ -43,6 +43,8 @@ set number              " show line numbers
 set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
 set showmatch           " highlight matching [{()}]
+set splitbelow
+set splitright
 
 """ Lightline
 set laststatus=2
