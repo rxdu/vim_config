@@ -97,7 +97,8 @@ ctrl+t	# return from tag
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags)
 * [c.vim](http://www.vim.org/scripts/script.php?script_id=213)
 * [colorsbox](https://github.com/mkarmona/colorsbox)
-
+* [lightline](https://github.com/itchyny/lightline.vim)
+		
 ## 3. Plugin dependencies
 
 * libclang > 3.8: required by YouCompleteMe
