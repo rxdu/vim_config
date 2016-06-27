@@ -73,7 +73,6 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 n			# repeat search in same direction
 N			# repeat search in opposite direction
 ```
-```
 
 * Invoke clang-format:
 ```
