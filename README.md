@@ -89,10 +89,20 @@ N			# repeat search in opposite direction
 \cc		# code to comment //
 \co		# comment // to code
 ```
+
 * Tags
 ```
 ctrl+]	# jump to tag
 ctrl+t	# return from tag
+```
+
+* CtrlP
+```
+ctrl+p	# invoke CtrlP in file find mode
+f5			# purge cache
+ctrl+f/b 	# cycle between modes
+ctrl+j/k	# navigate the result list
+ctrl+t/v 	# open the selected entry in a new tab or split
 ```
 
 ## 2. Plugins installed
@@ -106,7 +116,8 @@ ctrl+t	# return from tag
 * [c.vim](http://www.vim.org/scripts/script.php?script_id=213)
 * [colorsbox](https://github.com/mkarmona/colorsbox)
 * [lightline](https://github.com/itchyny/lightline.vim)
-		
+* [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+
 ## 3. Plugin dependencies
 
 * libclang > 3.8: required by YouCompleteMe
@@ -157,8 +168,6 @@ export TERM=xterm-256color
 ## 5. Plugins interested
 
 * [Ultisnips](https://github.com/SirVer/ultisnips)
-* [Lightline](https://github.com/itchyny/lightline.vim)
-
 
 ## Reference:
 
