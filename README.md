@@ -108,15 +108,15 @@ ctrl+t/v 	# open the selected entry in a new tab or split
 ## 2. Plugins installed
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-* [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
-* [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
-* [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format)
-* [Gutentags](https://github.com/ludovicchabant/vim-gutentags)
-* [c.vim](http://www.vim.org/scripts/script.php?script_id=213)
-* [colorsbox](https://github.com/mkarmona/colorsbox)
-* [lightline](https://github.com/itchyny/lightline.vim)
-* [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe): auto completion
+* [YCM-Generator](https://github.com/rdnetto/YCM-Generator): YouCompleteMe configuration file generator
+* [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ highlight
+* [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format): format code using clang-format
+* [Gutentags](https://github.com/ludovicchabant/vim-gutentags): quick reference to symbols/functions
+* [c.vim](http://www.vim.org/scripts/script.php?script_id=213): C/C++ support
+* [colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)
+* [lightline](https://github.com/itchyny/lightline.vim): a better-looking status bar
+* [CtrlP](https://github.com/ctrlpvim/ctrlp.vim): file/buffer quick search/switch
 
 ## 3. Plugin dependencies
 
