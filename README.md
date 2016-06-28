@@ -105,6 +105,11 @@ ctrl+j/k	# navigate the result list
 ctrl+t/v 	# open the selected entry in a new tab or split
 ```
 
+* TagBar
+```
+f8		# open the tag list
+```
+
 ## 2. Plugins installed
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
@@ -113,6 +118,7 @@ ctrl+t/v 	# open the selected entry in a new tab or split
 * [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ highlight
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format): format code using clang-format
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags): quick reference to symbols/functions
+* [TagBar](https://github.com/majutsushi/tagbar)
 * [c.vim](http://www.vim.org/scripts/script.php?script_id=213): C/C++ support
 * [colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)
 * [lightline](https://github.com/itchyny/lightline.vim): a better-looking status bar
@@ -128,7 +134,7 @@ $ cd clang*
 $ sudo cp -R * /usr/local/
 ```
 
-* ctags: required by Gutentags
+* ctags: required by Gutentags, TagBar
 ```
 $ sudo apt-get install exuberant-ctags
 ```

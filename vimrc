@@ -80,6 +80,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 """ Key mapping
 :inoremap jj <Esc>
+:nnoremap <F8> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 "             Addtional Configurations
