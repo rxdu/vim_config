@@ -16,6 +16,19 @@ $ git add .
 $ git commit -m "Initial commit"
 ```
 
+* Install configurations on another machine
+```
+$ cd ~
+$ git clone <your-vim-dotfile-repo-url> ~/.vim
+$ ln -s ~/.vim/vimrc ~/.vimrc
+$ cd ~/.vim
+$ git submodule update --init --recursive
+```
+
+Don't forget to install dependencies of the plugins after the configuration.
+
+**Install Plugins**
+
 * Install Pathogen
 ```
 $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -33,15 +46,6 @@ $ cd ~/.vim/bundle
 $ git submodule add <git-repo-url>
 $ git add .
 $ git commit -m "plugin info"
-```
-
-* Install configurations on another machine
-```
-$ cd ~
-$ git clone <your-vim-dotfile-repo-url> ~/.vim
-$ ln -s ~/.vim/vimrc ~/.vimrc
-$ cd ~/.vim
-$ git submodule update --init --recursive
 ```
 
 * Upgrade a plugin bundle/all bundles
@@ -62,6 +66,17 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 	ignore = dirty
+```
+
+**OS X Setup**
+
+* Install vim on OS X
+```
+$ sudo port install vim +python27 +huge
+```
+Add an alias in the ~/.bash_profile
+```
+alias vim='/opt/local/bin/vim'
 ```
 
 **Using vim**
@@ -133,10 +148,16 @@ $ tar xf clang*
 $ cd clang*
 $ sudo cp -R * /usr/local/
 ```
+```
+$ brew install clang-format
+```
 
 * ctags: required by Gutentags, TagBar
 ```
 $ sudo apt-get install exuberant-ctags
+```
+```
+brew install ctags-exuberant
 ```
 
 ## 4. Extra information for plugin installation
