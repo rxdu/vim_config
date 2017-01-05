@@ -19,7 +19,7 @@ $ git commit -m "Initial commit"
 * Install configurations on another machine
 ```
 $ cd ~
-$ git clone <your-vim-dotfile-repo-url> ~/.vim
+$ git clone https://github.com/rxdu/vim_config.git ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 $ cd ~/.vim
 $ git submodule update --init --recursive
@@ -94,11 +94,6 @@ N			# repeat search in opposite direction
 :ClangFormat
 ```
 
-* Invoke YCM-Generator to generate .ycm_extra_conf.py for the project
-```
-:YcmGenerateConfig
-```
-
 * C-support
 ```
 \cc		# code to comment //
@@ -128,8 +123,6 @@ f8		# open the tag list
 ## 2. Plugins installed
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe): auto completion
-* [YCM-Generator](https://github.com/rdnetto/YCM-Generator): YouCompleteMe configuration file generator
 * [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ highlight
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format): format code using clang-format
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags): quick reference to symbols/functions
@@ -138,10 +131,13 @@ f8		# open the tag list
 * [colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)
 * [lightline](https://github.com/itchyny/lightline.vim): a better-looking status bar
 * [CtrlP](https://github.com/ctrlpvim/ctrlp.vim): file/buffer quick search/switch
+* ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
+* ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
 
 ## 3. Plugin dependencies
 
-* libclang > 3.8: required by YouCompleteMe
+* ~~libclang > 3.8: required by YouCompleteMe~~
+<!--
 ```
 $ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
 $ tar xf clang*
@@ -151,6 +147,7 @@ $ sudo cp -R * /usr/local/
 ```
 $ brew install clang-format
 ```
+-->
 
 * ctags: required by Gutentags, TagBar
 ```
@@ -161,7 +158,7 @@ brew install ctags-exuberant
 ```
 
 ## 4. Extra information for plugin installation
-
+<!---
 **YouCompleteMe**
 
 * Install YCM using git add submodule
@@ -184,7 +181,8 @@ $ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/local . ~/.vim/bundle/YouCo
 $ cmake --build . --target ycm_core --config Release
 ```
 Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
-
+)
+-->
 **Colorscheme**
 
 Add the following variable to .bashrc to show color correctly.
