@@ -25,6 +25,8 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+	ignore = dirty
 [submodule "bundle/vim-cmake"]
 	path = bundle/vim-cmake
 	url = git://github.com/vhdirk/vim-cmake.git
+	ignore = dirty
