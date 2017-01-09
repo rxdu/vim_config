@@ -137,8 +137,8 @@ f8		# open the tag list
 
 ## 3. Plugin dependencies
 
-* ~~libclang > 3.8: required by YouCompleteMe~~
 <!--
+* ~~libclang > 3.8: required by YouCompleteMe~~
 
 ```
 $ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
@@ -149,7 +149,6 @@ $ sudo cp -R * /usr/local/
 ```
 $ brew install clang-format
 ```
-
 -->
 
 * ctags: required by Gutentags, TagBar
