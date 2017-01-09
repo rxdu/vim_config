@@ -131,6 +131,7 @@ f8		# open the tag list
 * [colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)
 * [lightline](https://github.com/itchyny/lightline.vim): a better-looking status bar
 * [CtrlP](https://github.com/ctrlpvim/ctrlp.vim): file/buffer quick search/switch
+* [vim-cmake](https://github.com/vhdirk/vim-cmake)
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
 
@@ -138,6 +139,7 @@ f8		# open the tag list
 
 * ~~libclang > 3.8: required by YouCompleteMe~~
 <!--
+
 ```
 $ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
 $ tar xf clang*
@@ -147,6 +149,7 @@ $ sudo cp -R * /usr/local/
 ```
 $ brew install clang-format
 ```
+
 -->
 
 * ctags: required by Gutentags, TagBar
@@ -158,7 +161,8 @@ brew install ctags-exuberant
 ```
 
 ## 4. Extra information for plugin installation
-<!---
+<!--
+
 **YouCompleteMe**
 
 * Install YCM using git add submodule
@@ -182,6 +186,7 @@ $ cmake --build . --target ycm_core --config Release
 ```
 Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
 )
+
 -->
 **Colorscheme**
 
