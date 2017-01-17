@@ -78,6 +78,10 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+""" Tagbar
+let g:tagbar_sort = 0
+"let g:tagbar_show_linenumbers = 2
+
 """ Key mapping
 :inoremap jj <Esc>
 :nnoremap <F8> :TagbarToggle<CR>
