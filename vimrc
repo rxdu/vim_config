@@ -30,6 +30,10 @@ syntax enable
 "let g:cpp_experimental_template_highlight = 1
 "set background=dark
 "colorscheme colorsbox-material
+syntax enable
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 """ C.vim
 let g:C_UseTool_cmake = 'yes'
