@@ -53,6 +53,10 @@ set laststatus=2
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+""" Markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+
 """ C++ Enhanced Highlight
 let c_no_curly_error = 1
 " let g:cpp_class_scope_highlight = 1

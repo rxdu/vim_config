@@ -30,3 +30,13 @@
 	path = bundle/vim-cmake
 	url = git://github.com/vhdirk/vim-cmake.git
 	ignore = dirty
+
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree
+    ignore = dirty
+
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+	ignore = dirty

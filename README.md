@@ -132,6 +132,8 @@ f8		# open the tag list
 * [lightline](https://github.com/itchyny/lightline.vim): a better-looking status bar
 * [CtrlP](https://github.com/ctrlpvim/ctrlp.vim): file/buffer quick search/switch
 * [vim-cmake](https://github.com/vhdirk/vim-cmake)
+* [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
+* [nerdtree](https://github.com/scrooloose/nerdtree.git)
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
 
