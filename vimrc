@@ -31,9 +31,10 @@ syntax enable
 "set background=dark
 "colorscheme colorsbox-material
 syntax enable
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme codedark
 
 """ C.vim
 let g:C_UseTool_cmake = 'yes'
