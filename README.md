@@ -139,7 +139,7 @@ f8		# open the tag list
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
 
-## 3. Plugin dependencies
+**Plugin dependencies**
 
 <!--
 * ~~libclang > 3.8: required by YouCompleteMe~~
@@ -162,6 +162,8 @@ $ sudo apt-get install exuberant-ctags
 ```
 brew install ctags-exuberant
 ```
+
+* clang-format
 
 ## 4. Extra information for plugin installation
 <!--
