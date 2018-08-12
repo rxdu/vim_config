@@ -177,10 +177,17 @@ f8		# open the tag list
 * [vim-cmake](https://github.com/vhdirk/vim-cmake)
 * [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 * [nerdtree](https://github.com/scrooloose/nerdtree.git)
+* [fugitive](https://github.com/tpope/vim-fugitive.git): git support
+* [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+* [vim-eunuch](https://github.com/tpope/vim-eunuch.git)
+* [vim-surround](https://github.com/tpope/vim-surround.git)
+* [ale](https://github.com/w0rp/ale.git): linting/fixing
+* [vim-clang](https://github.com/justmao945/vim-clang): parse and complete C/C++ source files
+* [vim-buftabline](https://github.com/ap/vim-buftabline.git)
 * ~~[colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)~~
 * ~~[vim-colors-solarized](https://github.com/altercation/vim-colors-solarized) - terminal [color scheme](https://github.com/altercation/solarized)~~
-* ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
-* ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
+* ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe): auto completion~~
+* ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator): YouCompleteMe configuration file generator~~
 
 ## 4. Extra information for plugin installation
 <!--
@@ -227,6 +234,7 @@ Configuration
 * http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 * http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules
 * http://dougblack.io/words/a-good-vimrc.html
+* https://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9
 
 Plugin documentation
 * https://lug.fh-swf.de/vim/vim-c/c-hotkeys.pdf

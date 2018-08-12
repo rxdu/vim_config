@@ -21,6 +21,8 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
+set hidden
+
 """ Pathogen 'runtimepath' management
 execute pathogen#infect()
 call pathogen#helptags()
@@ -53,16 +55,29 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 
 """ C++ Enhanced Highlight
-let c_no_curly_error = 1
+"let c_no_curly_error = 1
 " let g:cpp_class_scope_highlight = 1
 " let g:cpp_experimental_template_highlight = 1
 
 """ Clang-Format
-" g:clang_format#code_style "llvm, google, chromium, mozilla
-autocmd FileType c ClangFormatAutoEnable
+let g:clang_format#code_style = "google"
+" autocmd FileType c ClangFormatAutoEnable
+" let g:clang_format#style_options = {
+"            \ "UseTab": "false",
+"            \ "IndentWidth" : 2,
+"            \ "BreakBeforeBraces" : "Allman",
+"            \ "AccessModifierOffset" : -4,
+"            \ "AllowShortIfStatementsOnASingleLine" : "false",
+"            \ "AlwaysBreakTemplateDeclarations" : "true",
+"            \ "IndentCaseLabels": "false",
+"            \ "ColumnLimit": 0,
+"            \ "Standard" : "C++11"
+"            \ }
 
 """ Gutentags
 let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml', 
+                                \'*.ini', '*.rst', '*.md']
 
 """ YouCompleteMe
 " let g:ycm_show_diagnostics_ui = 1
@@ -82,25 +97,40 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 let g:tagbar_sort = 0
 "let g:tagbar_show_linenumbers = 2
 
+""" NerdTree
+" key mapping below
+
+""" Ale
+let g:ale_completion_enabled = 1
+
+""" vim-clang
+let g:clang_c_options = '-std=gnu11'
+let g:clang_cpp_options = '-std=c++11'
+let g:clang_compilation_database = './build'
+
 """ Key mapping
 :inoremap jj <Esc>
 :nnoremap <F8> :TagbarToggle<CR>
-
-""" lightline
-set laststatus=2
+:map <C-o> :NERDTreeToggle<CR>
+:map <C-i> :ClangFormat<CR>
+:nnoremap <c-z> <nop>
+"nnoremap <C-N> :bnext<CR>
+"nnoremap <C-P> :bprev<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 "             Addtional Configurations
 """"""""""""""""""""""""""""""""""""""""""""'""""""
 """ lightline
+set laststatus=2
+
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ], ['ctrlpmark'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
-      \   'fugitive': 'LightLineFugitive',
+      \   'gitbranch': 'fugitive#head',
       \   'filename': 'LightLineFilename',
       \   'fileformat': 'LightLineFileformat',
       \   'filetype': 'LightLineFiletype',
@@ -108,14 +138,15 @@ let g:lightline = {
       \   'mode': 'LightLineMode',
       \   'ctrlpmark': 'CtrlPMark',
       \ },
-      \ 'component_expand': {
-      \   'syntastic': 'SyntasticStatuslineFlag',
-      \ },
-      \ 'component_type': {
-      \   'syntastic': 'error',
-      \ },
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
+
+let g:lightline.tabline = {
+      \   'left': [ ['tabs'] ],
+      \   'right': [ ['close'] ]
+      \ }
+"set showtabline=2  " Show tabline
+"set guioptions-=e  " Don't use GUI tabline
 
 function! LightLineModified()
   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -136,18 +167,6 @@ function! LightLineFilename()
         \ ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
         \ ('' != fname ? fname : '[No Name]') .
         \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
-endfunction
-
-function! LightLineFugitive()
-  try
-    if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ''  " edit here for cool mark
-      let branch = fugitive#head()
-      return branch !=# '' ? mark.branch : ''
-    endif
-  catch
-  endtry
-  return ''
 endfunction
 
 function! LightLineFileformat()
@@ -208,17 +227,3 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
     let g:lightline.fname = a:fname
   return lightline#statusline(0)
 endfunction
-
-augroup AutoSyntastic
-  autocmd!
-  "autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
-
-"let g:unite_force_overwrite_statusline = 0
-"let g:vimfiler_force_overwrite_statusline = 0
-"let g:vimshell_force_overwrite_statusline = 0
