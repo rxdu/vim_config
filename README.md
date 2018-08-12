@@ -27,47 +27,6 @@ $ git submodule update --init --recursive
 
 Don't forget to install dependencies of the plugins after the configuration.
 
-**Install Plugins**
-
-* Install Pathogen
-```
-$ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-```
-
-add command to vimrc
-```
-execute pathogen#infect()
-```
-
-* Install plugins as submodules
-```
-$ cd ~/.vim/bundle
-$ git submodule add <git-repo-url>
-$ git add .
-$ git commit -m "plugin info"
-```
-
-* Upgrade a plugin bundle/all bundles
-```
-$ cd ~/.vim/bundle/<plugin-to-be-updated>
-$ git pull origin master
-```
-or
-```
-$ git submodule foreach git pull origin master
-```
-
-* Ignore changes in submodules
-
-Add "ignore = dirty" to the entry in .gitmodules. It should look like:
-```
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-	ignore = dirty
-```
-
 **OS X Setup**
 
 * Install vim on OS X
@@ -100,10 +59,41 @@ $ brew install clang-format
 $ sudo apt-get install exuberant-ctags
 ```
 ```
-brew install ctags-exuberant
+$ brew install ctags-exuberant
 ```
 
 * clang-format
+
+
+**Install Plugins**
+
+* Install plugins as submodules
+```
+$ cd ~/.vim/bundle
+$ git submodule add <git-repo-url>
+$ git add .
+$ git commit -m "plugin info"
+```
+
+* Upgrade a plugin bundle/all bundles
+```
+$ cd ~/.vim/bundle/<plugin-to-be-updated>
+$ git pull origin master
+```
+or
+```
+$ git submodule foreach git pull origin master
+```
+
+* Ignore changes in submodules
+
+Add "ignore = dirty" to the entry in .gitmodules. It should look like:
+```
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+	ignore = dirty
+```
 
 **Remove Plugins**
 
@@ -189,7 +179,8 @@ f8		# open the tag list
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe): auto completion~~
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator): YouCompleteMe configuration file generator~~
 
-## 4. Extra information for plugin installation
+## 3. Extra information for plugin installation
+
 <!--
 
 **YouCompleteMe**
