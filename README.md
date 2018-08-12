@@ -105,6 +105,23 @@ brew install ctags-exuberant
 
 * clang-format
 
+**Remove Plugins**
+
+* list existing plugins as git submodules
+
+```
+$ grep path .gitmodules | sed 's/.*= //'
+```
+
+* remove a package 
+
+```
+$git submodule deinit <package-path-and-name>
+$git rm <package-path-and-name>
+$rm -Rf .git/modules/<package-path-and-name>
+$git commit
+```
+
 **Using vim**
 
 * General vim commands
@@ -154,14 +171,14 @@ f8		# open the tag list
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags): quick reference to symbols/functions
 * [TagBar](https://github.com/majutsushi/tagbar)
 * [c.vim](http://www.vim.org/scripts/script.php?script_id=213): C/C++ support
-* [colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)
-* ~~[vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)~~ - terminal [color scheme](https://github.com/altercation/solarized)
 * [vim-code-dark](https://github.com/tomasiser/vim-code-dark): vs code dark color scheme
 * [lightline](https://github.com/itchyny/lightline.vim): a better-looking status bar
 * [CtrlP](https://github.com/ctrlpvim/ctrlp.vim): file/buffer quick search/switch
 * [vim-cmake](https://github.com/vhdirk/vim-cmake)
 * [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 * [nerdtree](https://github.com/scrooloose/nerdtree.git)
+* ~~[colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)~~
+* ~~[vim-colors-solarized](https://github.com/altercation/vim-colors-solarized) - terminal [color scheme](https://github.com/altercation/solarized)~~
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
 

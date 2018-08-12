@@ -6,10 +6,6 @@
 	path = bundle/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
 	ignore = dirty
-[submodule "bundle/colorsbox"]
-	path = bundle/colorsbox
-	url = https://github.com/mkarmona/colorsbox.git
-	ignore = dirty
 [submodule "bundle/vim-cpp-enhanced-highlight"]
 	path = bundle/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
@@ -41,10 +37,6 @@
 	url = https://github.com/plasticboy/vim-markdown.git
 	ignore = dirty
 
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-	ignore = dirty
 [submodule "bundle/vim-code-dark"]
 	path = bundle/vim-code-dark
 	url = https://github.com/tomasiser/vim-code-dark.git

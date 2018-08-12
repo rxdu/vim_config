@@ -1,94 +1,3 @@
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-"                Vim Configurations
-""""""""""""""""""""""""""""""""""""""""""""'""""""
-"                  Ruixiang Du
-"                  http://rdu.im
-"              ruixiang.du@gmail.com
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""" General vim configurations
-filetype on
-filetype plugin on
-
-""" Indent settings
-filetype indent on
-set autoindent
-set smartindent
-set cindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
-
-""" Pathogen 'runtimepath' management
-execute pathogen#infect()
-call pathogen#helptags()
-
-""" Colors and Fonts
-syntax enable
-colorscheme codedark
-
-""" C.vim
-let g:C_UseTool_cmake = 'yes'
-let g:C_UseTool_doxygen = 'yes'
-
-""" Spelling check
-set spell spelllang=en_us
-
-""" Editor UI
-set number              " show line numbers
-set cursorline          " highlight current line
-filetype indent on      " load filetype-specific indent files
-set showmatch           " highlight matching [{()}]
-set splitbelow
-set splitright
-
-""" Search
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
-
-""" Markdown
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_math = 1
-
-""" C++ Enhanced Highlight
-let c_no_curly_error = 1
-" let g:cpp_class_scope_highlight = 1
-" let g:cpp_experimental_template_highlight = 1
-
-""" Clang-Format
-" g:clang_format#code_style "llvm, google, chromium, mozilla
-autocmd FileType c ClangFormatAutoEnable
-
-""" Gutentags
-let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
-
-""" YouCompleteMe
-" let g:ycm_show_diagnostics_ui = 1
-" let g:ycm_enable_diagnostic_signs = 0
-" let g:ycm_enable_diagnostic_highlighting = 0
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-
-""" CtrlP
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_root_markers = ['.gitignore']
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-""" Tagbar
-let g:tagbar_sort = 0
-"let g:tagbar_show_linenumbers = 2
-
-""" Key mapping
-:inoremap jj <Esc>
-:nnoremap <F8> :TagbarToggle<CR>
-
-""" lightline
-set laststatus=2
-
 """""""""""""""""""""""""""""""""""""""""""""""""""
 "             Addtional Configurations
 """"""""""""""""""""""""""""""""""""""""""""'""""""
@@ -213,7 +122,6 @@ augroup AutoSyntastic
   autocmd!
   "autocmd BufWritePost *.c,*.cpp call s:syntastic()
 augroup END
-
 function! s:syntastic()
   SyntasticCheck
   call lightline#update()
