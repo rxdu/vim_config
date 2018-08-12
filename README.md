@@ -79,6 +79,32 @@ Add an alias in the ~/.bash_profile
 alias vim='/opt/local/bin/vim'
 ```
 
+**Plugin dependencies**
+
+<!--
+* ~~libclang > 3.8: required by YouCompleteMe~~
+
+```
+$ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
+$ tar xf clang*
+$ cd clang*
+$ sudo cp -R * /usr/local/
+```
+```
+$ brew install clang-format
+```
+-->
+
+* ctags: required by Gutentags, TagBar
+```
+$ sudo apt-get install exuberant-ctags
+```
+```
+brew install ctags-exuberant
+```
+
+* clang-format
+
 **Using vim**
 
 * General vim commands
@@ -138,32 +164,6 @@ f8		# open the tag list
 * [nerdtree](https://github.com/scrooloose/nerdtree.git)
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)~~: auto completion
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator)~~: YouCompleteMe configuration file generator
-
-**Plugin dependencies**
-
-<!--
-* ~~libclang > 3.8: required by YouCompleteMe~~
-
-```
-$ wget <clang-binaries-tarball-url> #  or `curl -O <url>`
-$ tar xf clang*
-$ cd clang*
-$ sudo cp -R * /usr/local/
-```
-```
-$ brew install clang-format
-```
--->
-
-* ctags: required by Gutentags, TagBar
-```
-$ sudo apt-get install exuberant-ctags
-```
-```
-brew install ctags-exuberant
-```
-
-* clang-format
 
 ## 4. Extra information for plugin installation
 <!--
