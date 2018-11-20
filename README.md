@@ -2,11 +2,10 @@
 
 Configurations and plugins for Vim.
 
-## 1. Commands
+## 1. Setup Vim
 
-**Setting up vim**
+### Using git to track dotfiles
 
-* Using git to track dotfiles
 ```
 $ mv .vimrc ~/.vim/vimrc
 $ ln -s ~/.vim/vimrc ~/.vimrc
@@ -16,7 +15,10 @@ $ git add .
 $ git commit -m "Initial commit"
 ```
 
-* Install configurations on another machine
+### Install configurations on a new machine
+
+* Linux
+
 ```
 $ cd ~
 $ git clone https://github.com/rxdu/vim_config.git ~/.vim
@@ -25,20 +27,38 @@ $ cd ~/.vim
 $ git submodule update --init --recursive
 ```
 
-Don't forget to install dependencies of the plugins after the configuration.
+* MacOS
 
-**OS X Setup**
-
-* Install vim on OS X
 ```
 $ sudo port install vim +python27 +huge
-```
-Add an alias in the ~/.bash_profile
-```
+
+#Add an alias in the ~/.bash_profile
 alias vim='/opt/local/bin/vim'
 ```
 
-**Plugin dependencies**
+### Additional setups
+
+* Colorscheme
+
+Add the following variable to .bashrc to show color correctly.
+```
+export TERM=xterm-256color
+```
+
+### Plugin dependencies
+
+* Linux
+
+ctags: required by Gutentags, TagBar
+
+```
+$ sudo apt-get install exuberant-ctags
+```
+* MacOS
+
+```
+$ brew install ctags-exuberant
+```
 
 <!--
 * ~~libclang > 3.8: required by YouCompleteMe~~
@@ -54,18 +74,9 @@ $ brew install clang-format
 ```
 -->
 
-* ctags: required by Gutentags, TagBar
-```
-$ sudo apt-get install exuberant-ctags
-```
-```
-$ brew install ctags-exuberant
-```
+## 2. Manage plugins
 
-* clang-format
-
-
-**Install Plugins**
+### Install new plugin
 
 * Install plugins as submodules
 ```
@@ -74,6 +85,8 @@ $ git submodule add <git-repo-url>
 $ git add .
 $ git commit -m "plugin info"
 ```
+
+### Update installed plugin
 
 * Upgrade a plugin bundle/all bundles
 ```
@@ -95,7 +108,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 	ignore = dirty
 ```
 
-**Remove Plugins**
+### Remove a plugin
 
 * list existing plugins as git submodules
 
@@ -112,7 +125,7 @@ $rm -Rf .git/modules/<package-path-and-name>
 $git commit
 ```
 
-**Using vim**
+## 3. Using vim
 
 * General vim commands
 ```
@@ -153,7 +166,7 @@ ctrl+t/v 	# open the selected entry in a new tab or split
 f8		# open the tag list
 ```
 
-## 2. Plugins installed
+## 4. Plugins installed
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
 * [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ highlight
@@ -179,9 +192,9 @@ f8		# open the tag list
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe): auto completion~~
 * ~~[YCM-Generator](https://github.com/rdnetto/YCM-Generator): YouCompleteMe configuration file generator~~
 
-## 3. Extra information for plugin installation
-
 <!--
+
+## 3. Extra information for plugin installation
 
 **YouCompleteMe**
 
@@ -208,14 +221,8 @@ Replace the PATH_TO_LLVM_ROOT if you have it extracted elsewhere.
 )
 
 -->
-**Colorscheme**
 
-Add the following variable to .bashrc to show color correctly.
-```
-export TERM=xterm-256color
-```
-
-## 5. Plugins interested
+## 5. Candidnate plugins
 
 * [Ultisnips](https://github.com/SirVer/ultisnips)
 

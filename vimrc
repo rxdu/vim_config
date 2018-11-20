@@ -55,24 +55,24 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 
 """ C++ Enhanced Highlight
-"let c_no_curly_error = 1
+" let c_no_curly_error = 1
 " let g:cpp_class_scope_highlight = 1
 " let g:cpp_experimental_template_highlight = 1
 
 """ Clang-Format
-let g:clang_format#code_style = "google"
+" let g:clang_format#code_style = "google"
 " autocmd FileType c ClangFormatAutoEnable
-" let g:clang_format#style_options = {
-"            \ "UseTab": "false",
-"            \ "IndentWidth" : 2,
-"            \ "BreakBeforeBraces" : "Allman",
-"            \ "AccessModifierOffset" : -4,
-"            \ "AllowShortIfStatementsOnASingleLine" : "false",
-"            \ "AlwaysBreakTemplateDeclarations" : "true",
-"            \ "IndentCaseLabels": "false",
-"            \ "ColumnLimit": 0,
-"            \ "Standard" : "C++11"
-"            \ }
+let g:clang_format#style_options = {
+            \ "UseTab": "false",
+            \ "IndentWidth" : 2,
+            \ "BreakBeforeBraces" : "Allman",
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "false",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "IndentCaseLabels": "false",
+            \ "ColumnLimit": 0,
+            \ "Standard" : "C++11"
+            \ }
 
 """ Gutentags
 let g:gutentags_project_root = ['Makefile','CMakeLists.txt']
