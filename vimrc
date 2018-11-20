@@ -8,6 +8,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 """ General vim configurations
+set nocompatible
 filetype on
 filetype plugin on
 

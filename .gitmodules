@@ -26,22 +26,18 @@
 	path = bundle/vim-cmake
 	url = git://github.com/vhdirk/vim-cmake.git
 	ignore = dirty
-
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree
     ignore = dirty
-
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
 	ignore = dirty
-
 [submodule "bundle/vim-code-dark"]
 	path = bundle/vim-code-dark
 	url = https://github.com/tomasiser/vim-code-dark.git
 	ignore = dirty
-
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -64,3 +60,7 @@
 [submodule "bundle/vim-buftabline"]
 	path = bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+    ignore = dirty

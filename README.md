@@ -45,11 +45,20 @@ Add the following variable to .bashrc to show color correctly.
 export TERM=xterm-256color
 ```
 
+<!--
+* YouCompleteMe
+
+```
+$ cd ~/.vim/bundle/YouCompleteMe
+$ python3 install.py --clang-completer
+```
+-->
+
 ### Plugin dependencies
 
-* Linux
-
 ctags: required by Gutentags, TagBar
+
+* Linux
 
 ```
 $ sudo apt-get install exuberant-ctags
@@ -79,6 +88,7 @@ $ brew install clang-format
 ### Install new plugin
 
 * Install plugins as submodules
+  
 ```
 $ cd ~/.vim/bundle
 $ git submodule add <git-repo-url>
@@ -89,6 +99,7 @@ $ git commit -m "plugin info"
 ### Update installed plugin
 
 * Upgrade a plugin bundle/all bundles
+  
 ```
 $ cd ~/.vim/bundle/<plugin-to-be-updated>
 $ git pull origin master
@@ -119,10 +130,10 @@ $ grep path .gitmodules | sed 's/.*= //'
 * remove a package 
 
 ```
-$git submodule deinit <package-path-and-name>
-$git rm <package-path-and-name>
-$rm -Rf .git/modules/<package-path-and-name>
-$git commit
+$ git submodule deinit <package-path-and-name>
+$ git rm <package-path-and-name>
+$ rm -Rf .git/modules/<package-path-and-name>
+$ git commit
 ```
 
 ## 3. Using vim
@@ -195,7 +206,7 @@ f8		# open the tag list
 <!--
 
 ## 3. Extra information for plugin installation
-
+cb 
 **YouCompleteMe**
 
 * Install YCM using git add submodule
