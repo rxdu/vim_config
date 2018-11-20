@@ -65,10 +65,10 @@ let g:vim_markdown_math = 1
 " autocmd FileType c ClangFormatAutoEnable
 let g:clang_format#style_options = {
             \ "UseTab": "false",
-            \ "IndentWidth" : 2,
+            \ "IndentWidth" : 4,
             \ "BreakBeforeBraces" : "Allman",
             \ "AccessModifierOffset" : -4,
-            \ "AllowShortIfStatementsOnASingleLine" : "false",
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
             \ "AlwaysBreakTemplateDeclarations" : "true",
             \ "IndentCaseLabels": "false",
             \ "ColumnLimit": 0,
