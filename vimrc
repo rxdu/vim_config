@@ -32,6 +32,8 @@ call pathogen#helptags()
 syntax enable
 colorscheme codedark
 
+let g:cpp_attributes_highlight = 1
+
 """ C.vim
 let g:C_UseTool_cmake = 'yes'
 let g:C_UseTool_doxygen = 'yes'
