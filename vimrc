@@ -10,6 +10,10 @@
 " Reference
 " [1] https://dougblack.io/words/a-good-vimrc.html
 
+""" Pathogen 'runtimepath' management
+execute pathogen#infect()
+call pathogen#helptags()
+
 """ General vim configurations
 set nocompatible
 filetype on
@@ -35,16 +39,9 @@ set noexpandtab
 
 set hidden
 
-""" Pathogen 'runtimepath' management
-execute pathogen#infect()
-call pathogen#helptags()
-
 """ Colors and Fonts
 syntax enable
 colorscheme codedark
-
-let g:airline_theme = 'codedark'
-let g:cpp_attributes_highlight = 1
 
 """ C.vim
 let g:C_UseTool_cmake = 'yes'
@@ -64,6 +61,22 @@ set splitright
 """ Search
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+
+""" Key mapping
+:inoremap jj <Esc>
+:nnoremap <F8> :TagbarToggle<CR>
+:map <C-o> :NERDTreeToggle<CR>
+:map <C-i> :ClangFormat<CR>
+:nnoremap <c-z> <nop>
+"nnoremap <C-N> :bnext<CR>
+"nnoremap <C-P> :bprev<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+"             Plugin Configurations
+""""""""""""""""""""""""""""""""""""""""""""'""""""
+
+""" Vim-Cpp-Modern
+let g:cpp_attributes_highlight = 1
 
 """ Markdown
 let g:vim_markdown_folding_disabled = 1
@@ -118,18 +131,20 @@ let g:clang_c_options = '-std=gnu11'
 let g:clang_cpp_options = '-std=c++11'
 let g:clang_compilation_database = './build'
 
-""" Key mapping
-:inoremap jj <Esc>
-:nnoremap <F8> :TagbarToggle<CR>
-:map <C-o> :NERDTreeToggle<CR>
-:map <C-i> :ClangFormat<CR>
-:nnoremap <c-z> <nop>
-"nnoremap <C-N> :bnext<CR>
-"nnoremap <C-P> :bprev<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""
 "             Addtional Configurations
 """"""""""""""""""""""""""""""""""""""""""""'""""""
+
+""" tmux
+" allows cursor change in tmux mode
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 """ lightline
 set laststatus=2
 
