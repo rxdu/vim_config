@@ -19,24 +19,27 @@ $ git add .
 $ git commit -m "plugin info"
 ```
 
-###  Upgrade a plugin bundle/all bundles
-```
-$ cd ~/.vim/bundle/<plugin-to-be-updated>
-$ git pull origin master
-```
-or
-```
-$ git submodule foreach git pull origin master
-```
-
-###  Ignore changes in submodules
-
 Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 ```
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 	ignore = dirty
+```
+
+###  Upgrade a plugin 
+
+Update a plugin
+
+```
+$ cd ~/.vim/bundle/<plugin-to-be-updated>
+$ git pull origin master
+```
+
+or update all plugins
+
+```
+$ git submodule foreach git pull origin master
 ```
 
 ### Remove a plugin
@@ -47,7 +50,7 @@ Add "ignore = dirty" to the entry in .gitmodules. It should look like:
 $ grep path .gitmodules | sed 's/.*= //'
 ```
 
-* remove a package 
+* remove a plugin package 
 
 ```
 $ git submodule deinit <package-path-and-name>
