@@ -180,7 +180,7 @@ f8		# open the tag list
 ## 4. Plugins installed
 
 * [Pathogen](https://github.com/tpope/vim-pathogen): runtime path management
-* [Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ highlight
+* [vim-cpp-modern](https://github.com/bfrg/vim-cpp-modern): C++ highlight
 * [Vim-Clang-Format](https://github.com/rhysd/vim-clang-format): format code using clang-format
 * [Gutentags](https://github.com/ludovicchabant/vim-gutentags): quick reference to symbols/functions
 * [TagBar](https://github.com/majutsushi/tagbar)
@@ -198,6 +198,7 @@ f8		# open the tag list
 * [ale](https://github.com/w0rp/ale.git): linting/fixing
 * [vim-clang](https://github.com/justmao945/vim-clang): parse and complete C/C++ source files
 * [vim-buftabline](https://github.com/ap/vim-buftabline.git)
+* ~~[Vim-Cpp-Enhanced-Highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ highlight~~
 * ~~[colorsbox](https://github.com/mkarmona/colorsbox): color scheme for VIM (not used by default)~~
 * ~~[vim-colors-solarized](https://github.com/altercation/vim-colors-solarized) - terminal [color scheme](https://github.com/altercation/solarized)~~
 * ~~[YouCompleteMe](https://github.com/Valloric/YouCompleteMe): auto completion~~

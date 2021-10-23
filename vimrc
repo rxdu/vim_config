@@ -7,10 +7,21 @@
 "              ruixiang.du@gmail.com
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Reference
+" [1] https://dougblack.io/words/a-good-vimrc.html
+
 """ General vim configurations
 set nocompatible
 filetype on
 filetype plugin on
+
+""" UI config
+set wildmenu            " visual autocomplete for command menu
+set showmatch           " highlight matching [{()}]
+
+""" Searching
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
 
 """ Indent settings
 filetype indent on
@@ -32,6 +43,7 @@ call pathogen#helptags()
 syntax enable
 colorscheme codedark
 
+let g:airline_theme = 'codedark'
 let g:cpp_attributes_highlight = 1
 
 """ C.vim
@@ -56,11 +68,6 @@ set hlsearch            " highlight matches
 """ Markdown
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
-
-""" C++ Enhanced Highlight
-" let c_no_curly_error = 1
-" let g:cpp_class_scope_highlight = 1
-" let g:cpp_experimental_template_highlight = 1
 
 """ Clang-Format
 " let g:clang_format#code_style = "google"
