@@ -1,6 +1,6 @@
 # Cheat Sheet
 
-## Navigating
+## Vim
 
 <style>
 td, th {
@@ -35,17 +35,39 @@ td, th {
 |       yy        |        Yank line (Copy)         |
 |        p        |              Paste              |
 |        P        |          Paste before           |
-|   **Editing**   |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
-|                 |                                 |
+
+## Plugin
+
+* Invoke clang-format:
+```
+:ClangFormat
+```
+
+* C-support
+```
+\cc		# code to comment //
+\co		# comment // to code
+```
+
+* Tags
+```
+ctrl+]	# jump to tag
+ctrl+t	# return from tag
+```
+
+* CtrlP
+```
+ctrl+p	# invoke CtrlP in file find mode
+f5			# purge cache
+ctrl+f/b 	# cycle between modes
+ctrl+j/k	# navigate the result list
+ctrl+t/v 	# open the selected entry in a new tab or split
+```
+
+* TagBar
+```
+f8		# open the tag list
+```
 
 
 ## Reference

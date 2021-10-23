@@ -85,97 +85,11 @@ $ brew install clang-format
 
 ## 2. Manage plugins
 
-### Install new plugin
-
-* Install plugins as submodules
-  
-```
-$ cd ~/.vim/bundle
-$ git submodule add <git-repo-url>
-$ git add .
-$ git commit -m "plugin info"
-```
-
-### Update installed plugin
-
-* Upgrade a plugin bundle/all bundles
-  
-```
-$ cd ~/.vim/bundle/<plugin-to-be-updated>
-$ git pull origin master
-```
-or
-```
-$ git submodule foreach git pull origin master
-```
-
-* Ignore changes in submodules
-
-Add "ignore = dirty" to the entry in .gitmodules. It should look like:
-```
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-	ignore = dirty
-```
-
-### Remove a plugin
-
-* list existing plugins as git submodules
-
-```
-$ grep path .gitmodules | sed 's/.*= //'
-```
-
-* remove a package 
-
-```
-$ git submodule deinit <package-path-and-name>
-$ git rm <package-path-and-name>
-$ rm -Rf .git/modules/<package-path-and-name>
-$ git commit
-```
+See [PLUGIN](PLUGIN.md)
 
 ## 3. Using vim
 
-* General vim commands
-```
-/pattern	# search forward
-?pattern	# search backward
-n			# repeat search in same direction
-N			# repeat search in opposite direction
-```
-
-* Invoke clang-format:
-```
-:ClangFormat
-```
-
-* C-support
-```
-\cc		# code to comment //
-\co		# comment // to code
-```
-
-* Tags
-```
-ctrl+]	# jump to tag
-ctrl+t	# return from tag
-```
-
-* CtrlP
-```
-ctrl+p	# invoke CtrlP in file find mode
-f5			# purge cache
-ctrl+f/b 	# cycle between modes
-ctrl+j/k	# navigate the result list
-ctrl+t/v 	# open the selected entry in a new tab or split
-```
-
-* TagBar
-```
-f8		# open the tag list
-```
+See [CHEATSHEET](CHEATSHEET.md)
 
 ## 4. Plugins installed
 
